@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <script>
     // array of object atau array didalam array atau array yang menyimpan array
     let p1 = {nama:"Salman", nilai:91};
@@ -101,3 +102,108 @@
         </table>
     </h3>`);
 </script>
+=======
+<script>
+    // array of object atau array didalam array atau array yang menyimpan array
+    let p1 = {nama:"Salman", nilai:91};
+    let p2 = {nama:"Ali", nilai:70};
+    let p3 = {nama:"Aldi", nilai:82};
+    let p4 = {nama:"Ani", nilai:63};
+    let p5 = {nama:"Budi", nilai:50};
+
+    let person = [p1,p2,p3,p4,p5];
+
+    // function to get grade based on score
+    function getGrade(score) {
+        if (score >= 90) {
+            return "A";
+        } else if (score >= 80) {
+            return "B";
+        } else if (score >= 70) {
+            return "C";
+        } else if (score >= 60) {
+            return "D";
+        } else {
+            return "E";
+        }
+    }
+
+    // function to get predicate based on grade
+    function getPredicate(grade) {
+        switch (grade) {
+            case "A":
+                return "Sangat baik";
+            case "B":
+                return "Baik";
+            case "C":
+                return "Cukup";
+            case "D":
+                return "Kurang";
+            case "E":
+                return "Sangat kurang";
+            default:
+                return "";
+        }
+    }
+
+    // table header
+    document.write(`<h3>
+        <table style="padding: 10; text-align: center; width: 100%;">
+            <thead>
+                <tr>
+                    <th>No</th>
+                    <th>Nama</th>
+                    <th>Nilai</th>
+                    <th>Grade</th>
+                    <th>Predikat</th>
+                    <th>Keterangan</th>
+                </tr>
+            </thead>
+            <tbody>`);
+
+    // table rows
+    var no = 1;
+    for (p of person){
+        let ket = (p.nilai >= 60)? "Lulus" : "Gagal";
+        let grade = getGrade(p.nilai);
+        let predicate = getPredicate(grade);
+
+        // set background color based on grade
+        let bgColor;
+        switch (grade) {
+            case "A":
+                bgColor = "#d4edda";
+                break;
+            case "B":
+                bgColor = "#cce5ff";
+                break;
+            case "C":
+                bgColor = "#fff3cd";
+                break;
+            case "D":
+                bgColor = "#f8d7da";
+                break;
+            case "E":
+                bgColor = "#f5c6cb";
+                break;
+            default:
+                bgColor = "";
+        }
+
+        // table row
+        document.write(`<tr style="background-color: ${bgColor};">
+            <td>${no++}</td>
+            <td>${p.nama}</td>
+            <td>${p.nilai}</td>
+            <td>${grade}</td>
+            <td>${predicate}</td>
+            <td>${ket}</td>
+        </tr>`);
+    }
+
+    // table footer
+    document.write(`</tbody>
+        </table>
+    </h3>`);
+</script>
+>>>>>>> 8edcdb507a04013c97692bf0cda76f06207a37d4
