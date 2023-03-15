@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <form id="kalkulator">
+        <table>
+            <tr>
+                <td>Angka 1:</td>
+                <td><input type="text" name="angka1" placeholder="Masukkan angka pertama"></td>
+            </tr>
+            <tr>
+                <td>Angka 2:</td>
+                <td><input type="text" name="angka2" placeholder="Masukkan angka kedua"></td>
+            </tr>
+            <tr>
+                <td>Operasi:</td>
+                <td>
+                    <input type="button" name="btn_tambah" value="+" onclick="tambah()">
+                    <input type="button" name="btn_kurang" value="-" onclick="kurang()">
+                    <input type="button" name="btn_kali" value="x" onclick="kali()">
+                    <input type="button" name="btn_bagi" value="/" onclick="bagi()">
+                    <input type="button" name="btn_pangkat" value="^" onclick="pangkat()">
+                </td>
+            </tr>
+            <tr>
+                <td>Hasil:</td>
+                <td><input type="text" name="hasil" class="hasil" value="" disabled></td>
+            </tr>
+        </table>
+    </form>
+    <script src="js/script.js"></script>
+</body>
+</html>
