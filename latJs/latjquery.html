@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+	<script>
+	$( document ).ready(function(){
+		//pemanggilan jquery dengan pemanggilan selector tag
+		$("input").click(function(){
+			alert("selamat Belajar Jquery")
+		});
+		//pembuatan jquery dengan pemanggilan id
+		$("#panggil_id").css("color","orange");
+		//pembuatan jquery dengan pemanggilan class
+		$(".panggil_class").css("color", "blue");
+		//menggunakan effect
+		$("p").hide(900);
+		$("p").slidDown(300);
+
+
+	});
+
+</script>
+<h1 id="panggil_id">Selamat Belajar Jquery Menggunakan ID</h1>
+<h1 class="panggil_class">Selamat Belajar Jquery Menggunakan class</h1>
+
+<p>Teksnya Hilang</p>
+<input type="submit" value="salam">
+</body>
+</html>
