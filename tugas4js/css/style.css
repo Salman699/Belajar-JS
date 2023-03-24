@@ -1,0 +1,35 @@
+ body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+        td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid #ccc;
+        }
+        input[type="text"] {
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+        }
+        input[type="button"] {
+            padding: 5px;
+            border: none;
+            border-radius: 3px;
+            background-color: #008CBA;
+            color: #fff;
+            cursor: pointer;
+        }
+        input[type="button"]:hover {
+            background-color: #006080;
+        }
+        input[type="button"]:active {
+            background-color: #004d66;
+        }
+        .hasil {
+            font-weight: bold;
+            font-size: 1.2em;
+        }

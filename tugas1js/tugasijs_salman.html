@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>>Hitung Volume Bangun Ruang</title>
+</head>
+<body>
+    <h1>Hitung Volume Bangun Ruang</h1>
+    
+    <p>Volume Persegi Panjang:</p>
+    <p id="volumePersegiPanjang"></p>
+
+    <p>Volume Jajar Genjang:</p>
+    <p id="volumeJajarGenjang"></p>
+
+    <p>Volume Segitiga:</p>
+    <p id="volumeSegitiga"></p>
+
+    <script>
+      // Rumus Volume Persegi Panjang
+      function volumePersegiPanjang(panjang, lebar, tinggi) {
+        return panjang * lebar * tinggi;
+      }
+
+      // Rumus Volume Jajar Genjang
+      function volumeJajarGenjang(alas, tinggi, tinggi2) {
+        return alas * tinggi * tinggi2;
+      }
+
+      // Rumus Volume Segitiga
+      function volumeSegitiga(alas, tinggi, tinggi2) {
+        return 1/3 * alas * tinggi * tinggi2;
+      }
+
+      // Input
+      const panjangPersegiPanjang = 5;
+      const lebarPersegiPanjang = 3;
+      const tinggiPersegiPanjang = 2;
+
+      const alasJajarGenjang = 4;
+      const tinggiJajarGenjang = 3;
+      const tinggi2JajarGenjang = 5;
+
+      const alasSegitiga = 6;
+      const tinggiSegitiga = 4;
+      const tinggi2Segitiga = 2;
+
+      // Hitung Volume
+      const volume1 = volumePersegiPanjang(panjangPersegiPanjang, lebarPersegiPanjang, tinggiPersegiPanjang);
+      const volume2 = volumeJajarGenjang(alasJajarGenjang, tinggiJajarGenjang, tinggi2JajarGenjang);
+      const volume3 = volumeSegitiga(alasSegitiga, tinggiSegitiga, tinggi2Segitiga);
+
+      // Output
+      document.getElementById("volumePersegiPanjang").innerHTML = volume1;
+      document.getElementById("volumeJajarGenjang").innerHTML = volume2;
+      document.getElementById("volumeSegitiga").innerHTML = volume3;
+    </script>
+  </body>
+</html>

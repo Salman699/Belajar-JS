@@ -1,0 +1,45 @@
+<script>
+  
+  // variabel untuk data pegawai
+const nama = "salman";
+const jabatan = "manager";
+const status = "belum_menikah";
+
+// variabel untuk gaji dan tunjangan
+let gajiPokok, tunjanganJabatan, bpjs, tunjanganKeluarga, totalPenghasilan;
+
+// logika untuk menghitung gaji dan tunjangan
+switch (jabatan) {
+  case "manager":
+    gajiPokok = 10_000_000; // 10 juta
+    break;
+  case "Asisten manager":
+    gajiPokok = 8_000_000; // 8 juta
+    break;
+  case "Staff":
+    gajiPokok = 5_000_000; // 5 juta
+    break;
+  default:
+    gajiPokok = 0; // jika jabatan tidak terdaftar, gaji pokok 0
+}
+
+tunjanganJabatan = 0.1 * gajiPokok; // 10% dari gaji pokok
+bpjs = 0.1 * gajiPokok; // 10% dari gaji pokok
+
+if (status === "menikah") {
+  tunjanganKeluarga = 0.1 * gajiPokok; // 10% dari gaji pokok
+} else {
+  tunjanganKeluarga = 0;
+}
+
+// menghitung total penghasilan
+totalPenghasilan = gajiPokok + tunjanganJabatan + bpjs + tunjanganKeluarga;
+
+// mencetak data pegawai, jabatan, gaji, dan lainnya
+document.write(`<br> Nama Pegawai: ${nama}`);
+document.write(`<br> Gaji Pokok: ${gajiPokok.toLocaleString()}`);
+document.write(`<br> Tunjangan Jabatan: ${tunjanganJabatan.toLocaleString()}`);
+document.write(`<br> BPJS: ${bpjs.toLocaleString()}`);
+document.write(`<br> Tunjangan Keluarga: ${tunjanganKeluarga.toLocaleString()}`);
+document.write(`<br> Total Penghasilan: ${totalPenghasilan.toLocaleString()}`);
+</script>
